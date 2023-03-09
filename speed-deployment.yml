@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
+metadata:
   name: speeddeployment
 spec:
   replicas: 2
@@ -38,7 +38,7 @@ spec:
             httpGet:
               path: /speed/health/liveness.htm
               port: 8080
-            initialDealySeconds: 15
+            initialDelaySeconds: 15
             timeoutSeconds: 15
             failureThreshold: 3
           resources:
